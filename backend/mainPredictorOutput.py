@@ -79,7 +79,7 @@ def predictor(inputImagePath, json_file):
     json_file.close()
     loaded_model = model_from_json(loaded_model_json)
 
-    loaded_model.load_weights('model.h5')
+    loaded_model.load_weights('backend\\model.h5')
 
     #image preprocessing
     im = Image.open(inputImagePath)
@@ -108,11 +108,11 @@ def img_predictor(inputImagePath, json_file):
     json_file.close()
     loaded_model = model_from_json(loaded_model_json)
 
-    loaded_model.load_weights('model.h5')
+    loaded_model.load_weights('backend\\model.h5')
     
     #load the model for images
 
-    image_model = load_model('unet_brain_mri_seg_official.hdf5', custom_objects={'dice_coef_loss': dice_coef_loss, 'iou': iou, 'dice_coef': dice_coef})
+    image_model = load_model('backend\\unet_brain_mri_seg_official.hdf5', custom_objects={'dice_coef_loss': dice_coef_loss, 'iou': iou, 'dice_coef': dice_coef})
 
     #image preprocessing
     im = Image.open(inputImagePath)

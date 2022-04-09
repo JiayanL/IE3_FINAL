@@ -1,11 +1,12 @@
 import mainPredictorOutput 
 
-def predictors(imgPath, json):
+def predictors(imgPath, file_json):
     
-    imgPredOutput = mainPredictorOutput.img_predictor(imgPath, json)
-    predOutput = mainPredictorOutput.predictor(imgPath, json)
+    
+    imgPredOutput = mainPredictorOutput.img_predictor(imgPath, file_json)
+    predOutput = mainPredictorOutput.predictor(imgPath, file_json)
 
-    if predOutput == [1]:
+    if predOutput == [1]:  
         if imgPredOutput == [1]:
             return 1 #"Found, has Image Output"
         else:

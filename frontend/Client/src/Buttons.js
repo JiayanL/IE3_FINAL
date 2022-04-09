@@ -10,8 +10,9 @@ export default props =>
     <div className='button'>
       <label htmlFor='multi'>
         <FontAwesomeIcon icon={faImages} color='#6d84b4' size='10x' />
+        <input type='file' id='multi' onChange={props.onChange} multiple />
       </label>
-      <input type='file' id='multi' onChange={props.onChange} multiple />
+      
     </div>
 
   </div>
